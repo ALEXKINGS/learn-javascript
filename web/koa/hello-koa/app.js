@@ -15,6 +15,7 @@ app.use(async (ctx,next) => {
 	ctx.response.body = '<h1>Hello , koa2!</h1>';
 });
 */
+/*
 app.use(async (ctx, next) => {
     console.log(`${ctx.request.method} ${ctx.request.url}`); // 打印URL
     await next(); // 调用下一个middleware
@@ -33,5 +34,27 @@ app.use(async (ctx, next) => {
     ctx.response.body = '<h1>Hello, koa2!</h1>';
 });
 
+
 app.listen(3000);
 console.log("app started at port 3000...");
+*/
+
+app.use(async (ctx, next) => {
+    console.log('第一1');
+    await next(); // 调用下一个middleware
+    console.log('第一2');
+});
+
+app.use(async (ctx, next) => {
+    console.log('第二1');
+    await next(); // 调用下一个middleware
+    console.log('第二2');
+});
+
+app.use(async (ctx, next) => {
+    console.log('第三1');
+    await next();
+    console.log('第三2');
+});
+app.listen(3000);
+console.log("app started at port 3000...git in dev");
