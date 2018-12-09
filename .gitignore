@@ -1,0 +1,4 @@
+node_modules
+package-lock.json
+
+/*以及其他你下你想要忽略的文件或文件夹*/
