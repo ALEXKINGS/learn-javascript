@@ -1,0 +1,25 @@
+{
+  "name": "hello-Mysql",
+  "version": "1.0.0",
+  "description": "Hello Mysql 2 example with async",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --use_strict app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "Keywords": [
+    "Mysql",
+    "async"
+  ],
+  "author": "ALEXKINGS Zheng",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ALEXKINGS/learn-javascript"
+  },
+  "dependencies": {
+    "mysql": "^2.16.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
+  }
+}
