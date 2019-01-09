@@ -1,21 +1,16 @@
 const fs = require('fs');
-console.log("controller");
+
 // add url-route in /controllers:
 
 function addMapping(router, mapping) {
     for (var url in mapping) {
-    	console.log("--url");
-    	console.log(url);
-    	console.log("mappding");
-    	console.log(mapping);
         if (url.startsWith('GET ')) {
             var path = url.substring(4);
             router.get(path, mapping[url]);
-            
             console.log(`register URL mapping: GET ${path}`);
-            console.log(`register URL mapUrl: GET ${mapping[url]}`);
-        	
         } else if (url.startsWith('POST ')) {
+        		console.log("haha");
+        	console.log(url);
             var path = url.substring(5);
             router.post(path, mapping[url]);
             console.log(`register URL mapping: POST ${path}`);
@@ -38,8 +33,7 @@ function addControllers(router, dir) {
         return f.endsWith('.js');
     }).forEach((f) => {
         console.log(`process controller: ${f}...`);
-        console.log(__dirname);
-        let mapping = require(__dirname + '/' + dir + '/' + f);  //E:\Node\alex\learn-javascript\web\koa\hello-url2-koa 
+        let mapping = require(__dirname + '/' + dir + '/' + f);
         addMapping(router, mapping);
     });
 }
@@ -49,7 +43,5 @@ module.exports = function (dir) {
         controllers_dir = dir || 'controllers',
         router = require('koa-router')();
     addControllers(router, controllers_dir);
-//  console.log("router ---");
-//  console.log(router);
     return router.routes();
 };
