@@ -1,0 +1,28 @@
+{
+  "name": "mocha",
+  "version": "1.0.0",
+  "description": "this is a test of mocha",
+  "main": "hello.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALEXKINGS/learn-javascript.git"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "alex",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ALEXKINGS/learn-javascript/issues"
+  },
+  "devDependencies": {
+    "mocha": "3.0.2"
+  },
+  "dependencies": {
+    "mz": "2.4.0",
+    "assert": "^1.4.1"
+  }
+}

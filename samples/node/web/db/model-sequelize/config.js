@@ -7,7 +7,7 @@ const fs = require('fs');
 
 var config = null;
 
-if (process.env.NODE_ENV === 'test') {
+if (process.env.NODE_ENV === 'test'){
     console.log(`Load ${testConfig}...`);
     config = require(testConfig);
 } else {
